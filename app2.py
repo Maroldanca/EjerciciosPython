@@ -57,6 +57,21 @@ juego_aleatorio()
 #--------------------------------------------------------------------------------------------------------------------------------
 #Ejercicio 3
 
+frase = input("Ingresa una frase: ").lower()  # Convertir a minúsculas
+contador = 0  # Inicializar el contador
+i = 0  # Inicializar el índice
+
+# Bucle while para recorrer la frase
+while i < len(frase):
+    if frase[i] in "aeiou":  # Si el carácter es una vocal
+        contador += 1  # Aumentar el contador
+    i += 1  # Avanzar al siguiente carácter
+
+# Mostrar el resultado
+print(f"La frase contiene {contador} vocales.")
+
+#--------------------------------------------------------------------------------------------------------------------------------
+#Ejercicio 4
 
 
 
