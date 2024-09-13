@@ -61,17 +61,72 @@ frase = input("Ingresa una frase: ").lower()  # Convertir a minúsculas
 contador = 0  # Inicializar el contador
 i = 0  # Inicializar el índice
 
-# Bucle while para recorrer la frase
 while i < len(frase):
     if frase[i] in "aeiou":  # Si el carácter es una vocal
         contador += 1  # Aumentar el contador
     i += 1  # Avanzar al siguiente carácter
 
-# Mostrar el resultado
 print(f"La frase contiene {contador} vocales.")
 
 #--------------------------------------------------------------------------------------------------------------------------------
 #Ejercicio 4
+
+# Función para mostrar el menú de opciones
+def mostrar_menu():
+    print("\nSelecciona una operación:")
+    print("1. Sumar (+)")
+    print("2. Restar (-)")
+    print("3. Multiplicar (*)")
+    print("4. Dividir (/)")
+    print("5. Salir")
+
+# Bucle principal
+while True:
+    mostrar_menu()
+    
+    opcion = input("Elige una opción (1-5): ")
+
+    if opcion == '5':  # Opción para salir
+        print("¡Gracias por usar la calculadora!")
+        break
+
+    num1 = float(input("Ingresa el primer número: "))
+    num2 = float(input("Ingresa el segundo número: "))
+
+    if opcion == '1':
+        resultado = num1 + num2
+        print(f"Resultado: {num1} + {num2} = {resultado}")
+    elif opcion == '2':
+        resultado = num1 - num2
+        print(f"Resultado: {num1} - {num2} = {resultado}")
+    elif opcion == '3':
+        resultado = num1 * num2
+        print(f"Resultado: {num1} * {num2} = {resultado}")
+    elif opcion == '4':
+        if num2 != 0:  # Verificar que no haya división por cero
+            resultado = num1 / num2
+            print(f"Resultado: {num1} / {num2} = {resultado}")
+        else:
+            print("Error: No se puede dividir entre 0.")
+    else:
+        print("Opción inválida. Por favor, elige una opción válida.")
+
+
+#--------------------------------------------------------------------------------------------------------------------------------
+#Ejercicio 5
+
+        # Inicializar la lista para almacenar los números pares
+numeros_pares = []
+
+# Inicializar el contador
+contador = 1
+
+while contador <= 100:
+    if contador % 2 == 0:  # Verificar si el número es par
+        numeros_pares.append(contador)  # Agregar el número par a la lista
+    contador += 1  # Incrementar el contador
+
+print("Números pares entre 1 y 100:", numeros_pares)
 
 
 

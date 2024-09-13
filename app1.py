@@ -1,20 +1,18 @@
 #Ejercicio 1
 
 def suma_elementos(lista):
-    # Inicializa la variable para acumular la suma
+
     suma = 0
     
-    # Recorre cada elemento de la lista
     for numero in lista:
-        # Acumula el valor del elemento en la variable suma
+
         suma += numero
     
-    # Devuelve el resultado de la suma
     return suma
 
 mi_lista = [1, 2, 3, 4, 5]
 resultado = suma_elementos(mi_lista)
-print(resultado)  # Salida: 15
+print(resultado)  
 
 #--------------------------------------------------------------------------------------------------------------------------------
 #Ejercicio 2
@@ -38,25 +36,22 @@ print(resultado2)
 #Ejercicio 3
 
 def elemento_mas_grande(lista):
-    # Verifica si la lista está vacía
+
     if not lista:
-        return None  # O podrías lanzar una excepción si prefieres
+        return None
     
-    # Inicializa la variable con el primer elemento de la lista
     max_elemento = lista[0]
     
     # Recorre cada elemento de la lista a partir del segundo
     for numero in lista[1:]:
-        # Actualiza el máximo si el elemento actual es mayor
         if numero > max_elemento:
             max_elemento = numero
     
-    # Devuelve el elemento más grande encontrado
     return max_elemento
 
 mi_lista3 = [3, 1, 4, 1, 5, 9, 2]
 resultado3 = elemento_mas_grande(mi_lista3)
-print(resultado3)  # Salida: 9
+print(resultado3) 
 
 #--------------------------------------------------------------------------------------------------------------------------------
 #Ejercicio 4
@@ -73,7 +68,7 @@ def multiplicar_elementos(lista):
 
 mi_lista4 = [1, 2, 3, 4]
 resultado4 = multiplicar_elementos(mi_lista4)
-print(resultado4)  # Salida: [2, 4, 6, 8]
+print(resultado4)
 
 #--------------------------------------------------------------------------------------------------------------------------------
 #Ejercicio 5
